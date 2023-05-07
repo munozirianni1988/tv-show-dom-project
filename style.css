@@ -1,3 +1,40 @@
+:root {
+  --lightblue: #caf0f8;
+  --springblue: #ade8f4;
+  --darkblue: #03045e;
+}
+
+body {
+  font-family: "Libre Baskerville", serif;
+  background-color: var(--lightblue);
+}
+
 #root {
-  color: red;
+  color: black;
+  display: flex;
+  /* align-content: center; */
+  /* justify-content: space-evenly; */
+  flex-wrap: wrap;
+}
+
+.single-container {
+  display: flex;
+  flex-flow: column;
+  box-shadow: 10px 15px 20px 5px #ade8f4;
+  border-radius: 15px;
+  width: 400px;
+  margin-top: 30px;
+  margin-left: 70px;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+}
+
+p {
+  font-size: 1rem;
+}
+
+h3 {
+  font-size: 1rem;
+  border: #03045e solid 1px;
 }
