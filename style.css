@@ -49,3 +49,13 @@ h3 {
 img {
   padding-top: 5px;
 }
+
+footer {
+  margin-top: 50px;
+  border-top: #03045e solid 1px;
+  width: 800px;
+  margin-left: 350px;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
