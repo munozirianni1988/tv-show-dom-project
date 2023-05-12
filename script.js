@@ -14,6 +14,7 @@ function makePageForEpisodes(episodeList) {
     let headerElement = document.createElement("h3");
     let imgElement = document.createElement("img");
     let pElement = document.createElement("p");
+    let aElement = document.createElement("a");
 
     //giving them a class
     divElement.classList.add("single-container");
@@ -22,10 +23,12 @@ function makePageForEpisodes(episodeList) {
     headerElement.innerHTML = `${element.name} - S${String(
       element.season
     ).padStart(2, "0")}E${String(element.number).padStart(2, "0")}`;
+    aElement.href = element.url;
     imgElement.src = element.image.medium;
     pElement.innerHTML = element.summary;
+    aElement.appendChild(imgElement);
     divElement.appendChild(headerElement);
-    divElement.appendChild(imgElement);
+    divElement.appendChild(aElement);
     divElement.appendChild(pElement);
     rootElem.appendChild(divElement);
   });
