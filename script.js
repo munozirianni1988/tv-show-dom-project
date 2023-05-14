@@ -4,10 +4,10 @@ function setup() {
   const allEpisodes = getAllEpisodes();
   makePageForEpisodes(allEpisodes);
 }
-
+//Level 100
 function makePageForEpisodes(episodeList) {
   const rootElem = document.getElementById("root");
-  //rootElem.textContent = `Got ${episodeList.length} episode(s)`;
+  rootElem.innerHTML = "";
   episodeList.forEach((element) => {
     //creating DOM elements
     let divElement = document.createElement("div");
@@ -35,3 +35,22 @@ function makePageForEpisodes(episodeList) {
 }
 
 window.onload = setup;
+
+//Level 200
+document.getElementById("search").addEventListener("input", filteredEpisodes);
+
+function filteredEpisodes() {
+  const allEpisodes = getAllEpisodes();
+  const searchBar = document.getElementById("search").value.toLowerCase();
+  const displayNumber = document.getElementById("number-display");
+  const filterEpisode = allEpisodes.filter((episode) => {
+    if (
+      episode.name.toLowerCase().includes(searchBar) ||
+      episode.summary.toLowerCase().includes(searchBar)
+    ) {
+      return episode;
+    }
+  });
+  displayNumber.innerText = filterEpisode.length;
+  makePageForEpisodes(filterEpisode);
+}
