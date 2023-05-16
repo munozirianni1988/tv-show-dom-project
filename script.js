@@ -54,3 +54,24 @@ function filteredEpisodes() {
   displayNumber.innerText = filterEpisode.length;
   makePageForEpisodes(filterEpisode);
 }
+
+//Level 300
+let selectElement = document.createElement("select");
+let defaultValue = document.createElement("option");
+defaultValue.text = "Select an episode...";
+selectElement.appendChild(defaultValue);
+let headerElement = document.querySelector("header");
+
+function selectEpisode() {
+  const allEpisodes = getAllEpisodes();
+  allEpisodes.forEach((episode) => {
+    let option = document.createElement("option");
+    selectElement.appendChild(option);
+    option.text = `S${String(episode.season).padStart(2, "0")}E${String(
+      episode.number
+    ).padStart(2, "0")}-${episode.name}`;
+
+    headerElement.appendChild(selectElement);
+  });
+}
+selectEpisode();
