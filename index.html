@@ -3,14 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TV Show Project | My Name (My GitHub username)</title>
+    <title>TV Show Project | Irianni Munoz (munozirianni1988)</title>
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <div id="root">
-    </div>
+    <header>
+      <input type="search" id="search" placeholder="Search an episode" />
+      <label for="search">
+        Displaying <span id="number-display">73</span>/73 episodes
+      </label>
+    </header>
+    <div id="root"></div>
+    <footer>
+      <span>
+        Data originally from <a href="https://tvmaze.com/">TVMaze.com</a></span
+      >
+    </footer>
 
     <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
     <script src="episodes.js"></script>
